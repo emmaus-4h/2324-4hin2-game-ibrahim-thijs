@@ -32,7 +32,29 @@ var health = 100;  // health van speler
  */
 var beweegAlles = function() {
   // speler
+  if (keyIsDown(65)) {
 
+  spelerX = spelerX -2;
+
+  }
+
+  if (keyIsDown(87)) {
+
+  spelerY = spelerY -2;
+
+  }
+
+  if (keyIsDown(83)) {
+
+  spelerY = spelerY +2;
+
+  }
+
+  if (keyIsDown(68)) {
+
+  spelerX = spelerX +2;
+
+  }
   // vijand
 
   // kogel
