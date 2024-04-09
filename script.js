@@ -79,7 +79,7 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-
+  
   // vijand
 
   // kogel
