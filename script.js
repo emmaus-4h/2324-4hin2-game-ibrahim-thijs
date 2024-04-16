@@ -23,6 +23,8 @@ var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var health = 100;  // health van speler
 
+var bg;
+
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
 /* ********************************************* */
@@ -34,25 +36,25 @@ var beweegAlles = function() {
   // speler
   if (keyIsDown(65)) {
 
-  spelerX = spelerX -2;
+  spelerX = spelerX -5;
 
   }
 
   if (keyIsDown(87)) {
 
-  spelerY = spelerY -2;
+  spelerY = spelerY -5;
 
   }
 
   if (keyIsDown(83)) {
 
-  spelerY = spelerY +2;
+  spelerY = spelerY +5;
 
   }
 
   if (keyIsDown(68)) {
 
-  spelerX = spelerX +2;
+  spelerX = spelerX +5;
 
   }
   // vijand
@@ -68,8 +70,8 @@ var beweegAlles = function() {
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
 
-  // botsing kogel tegen vijand
-
+  // botsing veld met spelers
+if (spelerX)
   // update punten en health
 
 };
@@ -79,7 +81,11 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
+  background(bg);
   
+    //fill('green')
+    //rect(0, 0, 1280, 720)
+
   // vijand
 
   // kogel
@@ -104,6 +110,9 @@ var tekenAlles = function() {
  * de p5 library, zodra het spel geladen is in de browser
  */
 function setup() {
+
+  bg = loadImage('background.png');
+  
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
   createCanvas(1280, 720);
 
@@ -129,3 +138,4 @@ function draw() {
     // teken game-over scherm
   }
 }
+
