@@ -19,9 +19,13 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 600; // x-positie van speler
-var spelerY = 600; // y-positie van speler
+var spelerX = 300; // x-positie van speler
+var spelerY = 700; // y-positie van speler
 var health = 100;  // health van speler
+
+var vijandX = 600; // x-positie van vijand
+var vijandY = 600; // y-positie van vijand
+var vijandHealth = 100; // health van vijand
 
 var bg;
 
@@ -58,8 +62,34 @@ var beweegAlles = function() {
 
   }
   // vijand
+if (keyIsDown(37)) {
 
+  vijandX  = spelerX -5;
+
+}
+
+if (keyIsDown(38)) {
+
+  vijandX  = spelerX -5;
+
+}
+
+  if (keyIsDown(40)) {
+
+  vijandX  = spelerX +5;
+
+}
+
+if (keyIsDown(39)) {
+
+  vijandX  = spelerX +5;
+
+}
+
+
+  
   // kogel
+
 };
 
 /**
@@ -71,9 +101,10 @@ var verwerkBotsing = function() {
   // botsing speler tegen vijand
 
   // botsing veld met spelers
-if (spelerX)
+  if (spelerX) {
   // update punten en health
-
+  
+  }
 };
 
 /**
@@ -111,10 +142,10 @@ var tekenAlles = function() {
  */
 function setup() {
 
-  bg = loadImage('background.png');
+  bg = loadImage('veldje.png');
   
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+  createCanvas(1920, 1080);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('blue');
