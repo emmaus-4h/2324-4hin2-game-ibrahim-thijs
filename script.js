@@ -23,8 +23,8 @@ var spelerX = 300; // x-positie van speler
 var spelerY = 700; // y-positie van speler
 var health = 100;  // health van speler
 
-var vijandX = 600; // x-positie van vijand
-var vijandY = 600; // y-positie van vijand
+var vijandX = 1600; // x-positie van vijand
+var vijandY = 700; // y-positie van vijand
 var vijandHealth = 100; // health van vijand
 
 var bg;
@@ -38,51 +38,51 @@ var bg;
  */
 var beweegAlles = function() {
   // speler
-  if (keyIsDown(65)) {
+  if (keyIsDown(65)) { // A pressed
 
   spelerX = spelerX -5;
 
   }
 
-  if (keyIsDown(87)) {
+  if (keyIsDown(87)) { // w pressed
 
   spelerY = spelerY -5;
 
   }
 
-  if (keyIsDown(83)) {
+  if (keyIsDown(83)) { // s pressed
 
   spelerY = spelerY +5;
 
   }
 
-  if (keyIsDown(68)) {
+  if (keyIsDown(68)) { // d is pressed
 
   spelerX = spelerX +5;
 
   }
   // vijand
-if (keyIsDown(37)) {
+if (keyIsDown(37)) { // arrow left pressed
 
-  vijandX  = spelerX -5;
-
-}
-
-if (keyIsDown(38)) {
-
-  vijandX  = spelerX -5;
+  vijandX  = vijandX -5;
 
 }
 
-  if (keyIsDown(40)) {
+if (keyIsDown(38)) { // arrow up is pressed
 
-  vijandX  = spelerX +5;
+  vijandY  = vijandY -5;
 
 }
 
-if (keyIsDown(39)) {
+  if (keyIsDown(40)) { // arrow down is pressed
 
-  vijandX  = spelerX +5;
+  vijandY  = vijandY +5;
+
+}
+
+if (keyIsDown(39)) { // arrow right is pressed
+
+  vijandX  = vijandX +5;
 
 }
 
@@ -100,6 +100,10 @@ if (keyIsDown(39)) {
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
 
+   
+   
+
+  
   // botsing veld met spelers
   if (spelerX) {
   // update punten en health
@@ -126,6 +130,11 @@ var tekenAlles = function() {
   rect(spelerX - 25, spelerY - 25, 50, 50);
   fill("black");
   ellipse(spelerX, spelerY, 10, 10);
+
+  fill("white");
+  rect(vijandX - 25, vijandY - 25, 50, 50);
+  fill("black");
+  ellipse(vijandX, vijandY, 10, 10);
 
   // punten en health
 
