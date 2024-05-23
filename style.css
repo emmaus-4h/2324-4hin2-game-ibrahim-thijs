@@ -1,19 +1,19 @@
+body {
+background-color: grey;
+  }
 
-.p5Canvas {
-  /* zorg dat canvas niet groter wordt dan window
-     en behoud breedte x hoogte verhouding van 1280x720 
-   */  
-  max-width: min(100vh*1280/720, 100vw);
-  max-height: min(100vw*720/1280, 100vh);
-  
-  /* zet canvas in het midden
-   */ 
-  display:block;
-  margin: auto;
+#grid {
+display: grid;
+grid-template-columns: repeat(16, 1fr);
+grid-template-rows: repeat(16, 1fr);
+gap: 2px; /* zorgt voor ruimte tussen de blokken */
 }
 
-html, body {
-  /* verwijder marge tussen canvas en rand van window
-   */ 
-  margin: 0px;
+.square {
+width: 100%;
+padding-bottom: 100%; /*  zorgt ervoor dat de blokken echte blokken zijn  */
 }
+
+
+
+
