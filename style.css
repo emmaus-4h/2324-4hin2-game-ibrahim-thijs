@@ -1,19 +1,12 @@
+
 body {
-background-color: grey;
-  }
-
-#grid {
-display: grid;
-grid-template-columns: repeat(16, 1fr);
-grid-template-rows: repeat(16, 1fr);
-gap: 2px; /* zorgt voor ruimte tussen de blokken */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
 }
-
-.square {
-width: 100%;
-padding-bottom: 100%; /*  zorgt ervoor dat de blokken echte blokken zijn  */
-}
-
-
-
-
+canvas {
+  border: 1px dashed #000;
+} 
